@@ -1,5 +1,3 @@
-# Concept name : Python Conditionals
-
 # Question : Check the status
 
             # Given two integer variables a and b, and a boolean variable flag. The task is to check the status and return accordingly.
@@ -17,5 +15,4 @@ class Solution:
         else:
             return (a < 0 <= b) or (b < 0 <= a)
 
-# Explanation : If flag is True, return True only if both a and b are negative.
-                # If it's False, check that exactly one of them is non-negative and return True if one is < 0 and the other is >= 0.
+
