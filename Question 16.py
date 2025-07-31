@@ -14,19 +14,19 @@
 
 # Solution :
 
-class Solution:
-    def rotateArr(self, arr, d):
-        n=len(arr)
-        d%=n
-        self.reverse(arr,0,d-1)
-        self.reverse(arr,d,n-1)
-        self.reverse(arr,0,n-1)
-        
-    def reverse(self,arr,left,right):
-        while left<right:
-            arr[left],arr[right]=arr[right],arr[left]
-            left+=1
-            right-=1
+def reverse(arr,start,end):
+    while start<end:
+        arr[start],arr[end]=arr[end],arr[start]
+        start+=1
+        end-=1
+n,k=map(int,input().split())
+arr=list(map(int,input().split()))[:n]
+k=k%n
+reverse(arr,0,n-1)
+reverse(arr,0,k-1)
+reverse(arr,k,n-1)
+for i in arr:
+    print(i,end=" ")
 
 # Explanation : To rotate an array counter-clockwise by d elements, use the Reversal Algorithm:
 #                           Reverse the first d elements.
